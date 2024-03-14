@@ -1,7 +1,7 @@
 { pkgs, username, ... }:
 
-pkgs.writeShellScriptBin "swww-script.sh" ''
-#!/bin/bash
+pkgs.writeShellScriptBin "swww-script" ''
+#!/usr/bin/env bash
 
 if [[ $# -lt 1 ]] || [[ ! -d $1   ]]; then
 	echo "Usage:

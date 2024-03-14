@@ -37,6 +37,7 @@ in {
       vim
       waybar
       wireplumber
+      woeusb
       yabridge
     ];
   };

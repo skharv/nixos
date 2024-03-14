@@ -42,6 +42,7 @@
             home-manager.extraSpecialArgs = {
               inherit username;
               inherit inputs;
+              inherit hostname;
             };
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;

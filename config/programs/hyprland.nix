@@ -13,8 +13,11 @@ in
 
             exec-once = [
                 "swww init"
-                swww-script
                 "waybar"
+            ];
+
+            exec = [
+                swww-script
             ];
 
 

@@ -1,8 +1,10 @@
+{ hostname, ... }:
 {
   programs.bash = {
     enable = true;
     shellAliases = {
-      editnix = "sudo -E nvim /etc/nixos";
+      nixedit = "sudo -E nvim /etc/nixos";
+      nixrb = "sudo nixos-rebuild switch --flake /etc/nixos/#${hostname}";
     };
   };
 }

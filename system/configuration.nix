@@ -14,21 +14,12 @@ in {
     loader = {
       efi = {
         canTouchEfiVariables = true;
-        efiSysMountPoint = "/boot";
       };
       grub = {
         enable = true;
         efiSupport = true;
         device = "nodev";
         useOSProber = true;
-        extraEntries = ''
-          menuentry "Windows" --class windows --class os {
-            insmod part_gpt
-            insmod fat
-            search --no-floppy --fs-uuid --set=root 30EE162AEE15E93C
-            chainloader /efi/Microsoft/Boot/bootmgfw.efi
-          }
-        '';
       };
     };
   };
