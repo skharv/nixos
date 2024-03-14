@@ -63,6 +63,7 @@ in {
   environment.systemPackages = with pkgs; [
     vim
     git
+    wget
   ];
 
   services.getty.autologinUser = "${username}";

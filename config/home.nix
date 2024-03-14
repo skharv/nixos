@@ -24,6 +24,7 @@ in {
       discord
       firefox
       htop
+      llvm
       neofetch
       (nerdfonts.override { fonts = [ "Mononoki" ]; })
       qpwgraph
