@@ -21,6 +21,7 @@ in {
       alacritty
       aseprite
       bitwig-studio
+      blender
       discord
       firefox
       htop
