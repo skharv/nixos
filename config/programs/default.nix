@@ -6,6 +6,6 @@
     ./bash.nix
     ./hyprland.nix
     ./waybar.nix
-    ./neovim.nix
+    ./nixvim.nix
   ];
 }

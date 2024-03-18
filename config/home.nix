@@ -1,5 +1,4 @@
 { pkgs, outputs, inputs, username, ... }:
-
 let 
   inherit (import ./options.nix)
     gitUsername
@@ -7,6 +6,7 @@ let
     theme;
 in {
   imports = [
+    inputs.nixvim.homeManagerModules.nixvim
     ./programs
   ];
 
@@ -49,6 +49,9 @@ in {
       enable = true;
       userName = "${gitUsername}";
       userEmail = "${gitEmail}";
+    };
+    nixvim = {
+        enable = true;
     };
   };
 }

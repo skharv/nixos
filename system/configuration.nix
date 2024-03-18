@@ -1,5 +1,4 @@
 { config, lib, pkgs, inputs, username, hostname, ... }:
-
 let
   inherit (import ../config/options.nix)
     locale timezone gitUsername theme;
@@ -66,6 +65,7 @@ in {
     pulse.enable = true;
     jack.enable = true;
   };
+  services.resolved.enable = true;
 
   networking = {
     hostName = "${hostname}";
@@ -75,6 +75,7 @@ in {
     };
     networkmanager = {
       enable = true;
+      dns = "systemd-resolved";
     };
   };
 

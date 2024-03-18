@@ -13,10 +13,15 @@
       url = "github:misterio77/nix-colors";
     };
 
+    nixvim = {
+        url = "github:nix-community/nixvim";
+        inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     hyprland.url = "github:hyprwm/Hyprland";
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, ... }:
+  outputs = inputs@{ nixpkgs, home-manager, nixvim, ... }:
   let 
     system = "x86_64-linux";
     inherit (import ./config/options.nix) username hostname;
@@ -40,8 +45,8 @@
           ./system/configuration.nix
           home-manager.nixosModules.home-manager {
             home-manager.extraSpecialArgs = {
-              inherit username;
               inherit inputs;
+              inherit username;
               inherit hostname;
             };
             home-manager.useGlobalPkgs = true;
