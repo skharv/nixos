@@ -48,11 +48,15 @@ in {
     steam = {
       enable = true;
     };
+    java = {
+      enable = true;
+    };
   };
 
   environment.systemPackages = with pkgs; [
-    vim
     git
+    openjdk
+    vim
     wget
   ];
 

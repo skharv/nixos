@@ -28,6 +28,7 @@ in {
       llvm
       neofetch
       (nerdfonts.override { fonts = [ "Mononoki" ]; })
+      qbittorrent
       qpwgraph
       rofi-wayland
       rustup
